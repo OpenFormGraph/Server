@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using Amazon.SimpleWorkflow.Model;
 using OpenFormGraph.Library.DAOs;
 using OpenFormGraph.Library.Objects;
-using MongoDB.Driver;
 using TreeGecko.Library.AWS.Helpers;
 using TreeGecko.Library.Common.Helpers;
 using TreeGecko.Library.Common.Objects;
@@ -14,10 +12,10 @@ using TreeGecko.Library.Net.Objects;
 
 namespace OpenFormGraph.Library.Managers
 {
-    public class FormDataManager : AbstractCoreManagerWithUser
+    public class OpenFormGraphManager : AbstractCoreManagerWithUser
     {
-        public FormDataManager()
-            : base("FormData")
+        public OpenFormGraphManager()
+            : base("OFG")
         {
         }
 

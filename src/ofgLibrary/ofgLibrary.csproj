@@ -79,8 +79,8 @@
     <Compile Include="DAOs\RelationshipDAO.cs" />
     <Compile Include="Extensions\TGSerializedObjectExtensions.cs" />
     <Compile Include="Interfaces\IMetadata.cs" />
-    <Compile Include="Managers\FormDataManager.cs" />
-    <Compile Include="Managers\FormDataStructureManager.cs" />
+    <Compile Include="Managers\OpenFormGraphManager.cs" />
+    <Compile Include="Managers\OpenFormGraphStructureManager.cs" />
     <Compile Include="Objects\FormRecord.cs" />
     <Compile Include="Objects\ListRecord.cs" />
     <Compile Include="Objects\ListValue.cs" />

@@ -94,6 +94,7 @@
     <Content Include="js\controllers.js" />
     <Content Include="js\services.js" />
     <Content Include="Style\app.css" />
+    <None Include="Views\dbbuildresult.sshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -105,13 +106,16 @@
   <ItemGroup>
     <Compile Include="Bootstrapper\CustomBootstrapper.cs" />
     <Compile Include="Helpers\AuthHelper.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\UserMapper.cs" />
     <Compile Include="JsonObjects\Form.cs" />
     <Compile Include="JsonObjects\List.cs" />
     <Compile Include="JsonObjects\ListValue.cs" />
+    <Compile Include="JsonObjects\LoginRequest.cs" />
     <Compile Include="JsonObjects\LoginResult.cs" />
     <Compile Include="JsonObjects\Question.cs" />
     <Compile Include="JsonObjects\Relationship.cs" />
+    <Compile Include="JsonObjects\User.cs" />
     <Compile Include="Modules\AppModule.cs" />
     <Compile Include="Modules\RestModule.cs" />
     <Compile Include="Objects\NancyUser.cs" />

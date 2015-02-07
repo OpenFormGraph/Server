@@ -12,7 +12,7 @@ namespace OpenFormGraph.Web.Helpers
     {
         public IUserIdentity GetUserFromIdentifier(Guid _identifier, NancyContext _context)
         {
-            FormDataManager manager = new FormDataManager();
+            OpenFormGraphManager manager = new OpenFormGraphManager();
 
             TGUser user = manager.GetUser(_identifier);
 

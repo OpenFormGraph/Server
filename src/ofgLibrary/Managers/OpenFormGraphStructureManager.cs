@@ -6,10 +6,10 @@ using TreeGecko.Library.Net.Managers;
 
 namespace OpenFormGraph.Library.Managers
 {
-    public class FormDataStructureManager : AbstractCoreStructureManager
+    public class OpenFormGraphStructureManager : AbstractCoreStructureManager
     {
-        public FormDataStructureManager(MongoDatabase _mongoDB) 
-            : base(_mongoDB)
+        public OpenFormGraphStructureManager()
+            : base("OFG")
         {
         }
 
