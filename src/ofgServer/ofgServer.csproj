@@ -87,14 +87,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientViews\addform.html" />
+    <Content Include="ClientViews\addformtemplate.html" />
+    <Content Include="ClientViews\adduser.html" />
+    <Content Include="ClientViews\listformtemplates.html" />
     <Content Include="ClientViews\home.html" />
+    <Content Include="ClientViews\listusers.html" />
     <Content Include="ClientViews\login.html" />
     <Content Include="ClientViews\logout.html" />
+    <Content Include="ClientViews\search.html" />
     <Content Include="js\app.js" />
     <Content Include="js\controllers.js" />
+    <Content Include="js\lockr.min.js" />
     <Content Include="js\services.js" />
-    <Content Include="Style\app.css" />
-    <None Include="Views\dbbuildresult.sshtml" />
+    <Content Include="css\app.css" />
+    <None Include="Views\dev_buildadminuserresult.sshtml" />
+    <None Include="Views\dev_dbbuildresult.sshtml" />
+    <None Include="Views\menu_assets.sshtml" />
+    <None Include="Views\menu_admin.sshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -102,6 +112,8 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Views\menu.sshtml" />
+    <None Include="Views\standardincludes.sshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper\CustomBootstrapper.cs" />
@@ -113,6 +125,7 @@
     <Compile Include="JsonObjects\ListValue.cs" />
     <Compile Include="JsonObjects\LoginRequest.cs" />
     <Compile Include="JsonObjects\LoginResult.cs" />
+    <Compile Include="JsonObjects\NewUser.cs" />
     <Compile Include="JsonObjects\Question.cs" />
     <Compile Include="JsonObjects\Relationship.cs" />
     <Compile Include="JsonObjects\User.cs" />

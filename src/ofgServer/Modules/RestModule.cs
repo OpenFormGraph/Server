@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
 using Nancy;
 using Newtonsoft.Json;
 using OpenFormGraph.Library.Managers;
@@ -42,20 +39,45 @@ namespace OpenFormGraph.Web.Modules
                 return null;
             };
 
-            Get["/rest/list/{guid}"] = _parameters =>
+            Get["/rest/form/list/{guid}"] = _parameters =>
             {
+                //Return 
                 return null;
             };
 
-            Post["/rest/list"] = _parameters =>
+            Get["/rest/users"] = _parameters =>
             {
-                return null;
+                Response response = HandleUsersGet(_parameters);
+                response.ContentType = "application/json";
+                return response;
             };
 
             Get["/rest/formtemplates"] = _parameters =>
             {
                 return null;
             };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_parameters"></param>
+        /// <returns></returns>
+        public string HandleUsersGet(DynamicDictionary _parameters)
+        {
+            OpenFormGraphManager manager = new OpenFormGraphManager();
+
+            User jUser = AuthHelper.ValidateToken(manager, Request);
+            if (jUser != null
+                && jUser.IsUserAdmin)
+            {
+                List<TGUser> users = manager.GetUsers();
+
+                List<User> jUsers = JsonHelper.GetUsers(manager, users);
+                return JsonConvert.SerializeObject(jUsers);
+            }
+
+            return "[]";
         }
         
         public string HandleLoginPost(DynamicDictionary _parameters)
@@ -70,8 +92,7 @@ namespace OpenFormGraph.Web.Modules
             }
 
             if (jLoginRequest != null)
-            {
-             
+            { 
                 LoginResult jResult = AuthHelper.Authorize(m_Manager, jLoginRequest.Username, jLoginRequest.Password, out user);
 
                 return JsonConvert.SerializeObject(jResult);

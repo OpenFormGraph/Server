@@ -11,6 +11,40 @@ namespace OpenFormGraph.Web.Helpers
 {
     public static class AuthHelper
     {
+        public static User ValidateToken(OpenFormGraphManager _manager, Request _request)
+        {
+            string username = _request.Headers["Username"].First();
+            string token = _request.Headers["AuthToken"].First();
+
+            TGUser user;
+            if (_manager.ValidateUser(username, token, out user))
+            {
+                User result = new User(user);
+
+                if (_manager.HasUserRole(user.Guid, "UserAdmin"))
+                {
+                    result.IsUserAdmin = true;
+                }
+                else
+                {
+                    result.IsUserAdmin = false;
+                }
+
+                if (_manager.HasUserRole(user.Guid, "DataAdmin"))
+                {
+                    result.IsDataAdmin = true;
+                }
+                else
+                {
+                    result.IsDataAdmin = false;
+                }
+
+                return result;
+            }
+
+            return null;
+        }
+
         public static LoginResult Authorize(OpenFormGraphManager _manager, 
             string _username, string _password, out TGUser _user)
         {
@@ -23,12 +57,30 @@ namespace OpenFormGraph.Web.Helpers
                 {
                     if (_manager.ValidateUser(_user, _password))
                     {
-                        
                         string token = _manager.GetAuthorizationToken(_user.Guid, _password);
 
                         result.Result = "Success";
                         result.AuthToken = token;
                         result.Username = _username;
+
+                        if (_manager.HasUserRole(_user.Guid, "UserAdmin"))
+                        {
+                            result.IsUserAdmin = true;
+                        }
+                        else
+                        {
+                            result.IsUserAdmin = false;
+                        }
+
+                        if (_manager.HasUserRole(_user.Guid, "DataAdmin"))
+                        {
+                            result.IsDataAdmin = true;
+                        }
+                        else
+                        {
+                            result.IsDataAdmin = false;
+                        }
+
                     }
                     else
                     {

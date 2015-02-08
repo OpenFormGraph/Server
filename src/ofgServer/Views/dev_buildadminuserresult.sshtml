@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Build Admin User</title>
+	@Partial['standardincludes.sshtml']
+</head>
+	<body>
+		<h1>Admin User</h1>
+		<ul>
+			<li>Username - @Model.Username</li>
+			<li>Password - @Model.Password</li>
+		</ul>
+	</body>
+</html>

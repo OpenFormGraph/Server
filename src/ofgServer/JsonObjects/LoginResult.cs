@@ -10,5 +10,7 @@ namespace OpenFormGraph.Web.JsonObjects
         public string NeedsEula { get; set; }
         public string EulaGuid { get; set; }
         public string EulaText { get; set; }
+        public bool IsUserAdmin { get; set; }
+        public bool IsDataAdmin { get; set; }
     }
 }

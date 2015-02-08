@@ -27,7 +27,7 @@ namespace OpenFormGraph.Web.Bootstrapper
             base.ConfigureConventions(_conventions);
            
             _conventions.StaticContentsConventions.Add(
-                StaticContentConventionBuilder.AddDirectory("style", @"Style")
+                StaticContentConventionBuilder.AddDirectory("css", @"css")
             );
 
             _conventions.StaticContentsConventions.Add(
