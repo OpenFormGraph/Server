@@ -1,5 +1,6 @@
 ﻿using Nancy;
 using OpenFormGraph.Library.Managers;
+using OpenFormGraph.Web.Constants;
 using OpenFormGraph.Web.JsonObjects;
 using TreeGecko.Library.Common.Helpers;
 using TreeGecko.Library.Common.Security;
@@ -27,11 +28,8 @@ namespace OpenFormGraph.Web.Modules
 
                     return View["dev_dbbuildresult.sshtml"];
                 }
-                else
-                {
-                    return null;
-                }
 
+                return null;
             };
 
             Get["/dev/BuildAdminUser"] = _parameters =>
@@ -56,7 +54,7 @@ namespace OpenFormGraph.Web.Modules
                         TGUserRole userAdminRole = new TGUserRole
                         {
                             Active = true,
-                            Name = "UserAdmin",
+                            Name = UserRoles.UserAdmin,
                             ParentGuid = user.Guid
                         };
                         manager.Persist(userAdminRole);
@@ -64,7 +62,7 @@ namespace OpenFormGraph.Web.Modules
                         TGUserRole dataAdminRole = new TGUserRole
                         {
                             Active = true,
-                            Name = "DataAdmin",
+                            Name = UserRoles.DataAdmin,
                             ParentGuid = user.Guid
                         };
                         manager.Persist(dataAdminRole);
@@ -72,7 +70,6 @@ namespace OpenFormGraph.Web.Modules
                         JsonObjects.NewUser jNewUser = new NewUser(user, password);
 
                         return View["dev_buildadminuserresult.sshtml", jNewUser]; 
-
                     }
                 }
 

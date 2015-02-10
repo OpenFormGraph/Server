@@ -1,2 +1,25 @@
 ﻿body {
 }
+
+.padrow {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.padtop {
+    padding-top: 10px;
+}
+
+.padbottom {
+    padding-bottom: 10px;
+}
+
+.userForm {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.form-group {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}

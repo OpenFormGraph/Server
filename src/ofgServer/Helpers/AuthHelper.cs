@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using OpenFormGraph.Library.Managers;
+using OpenFormGraph.Web.Constants;
 using OpenFormGraph.Web.JsonObjects;
 using Nancy;
 using Newtonsoft.Json;
@@ -21,7 +22,7 @@ namespace OpenFormGraph.Web.Helpers
             {
                 User result = new User(user);
 
-                if (_manager.HasUserRole(user.Guid, "UserAdmin"))
+                if (_manager.HasUserRole(user.Guid, UserRoles.UserAdmin))
                 {
                     result.IsUserAdmin = true;
                 }
@@ -30,7 +31,7 @@ namespace OpenFormGraph.Web.Helpers
                     result.IsUserAdmin = false;
                 }
 
-                if (_manager.HasUserRole(user.Guid, "DataAdmin"))
+                if (_manager.HasUserRole(user.Guid, UserRoles.DataAdmin))
                 {
                     result.IsDataAdmin = true;
                 }
@@ -63,7 +64,7 @@ namespace OpenFormGraph.Web.Helpers
                         result.AuthToken = token;
                         result.Username = _username;
 
-                        if (_manager.HasUserRole(_user.Guid, "UserAdmin"))
+                        if (_manager.HasUserRole(_user.Guid, UserRoles.UserAdmin))
                         {
                             result.IsUserAdmin = true;
                         }
@@ -72,7 +73,7 @@ namespace OpenFormGraph.Web.Helpers
                             result.IsUserAdmin = false;
                         }
 
-                        if (_manager.HasUserRole(_user.Guid, "DataAdmin"))
+                        if (_manager.HasUserRole(_user.Guid, UserRoles.DataAdmin))
                         {
                             result.IsDataAdmin = true;
                         }

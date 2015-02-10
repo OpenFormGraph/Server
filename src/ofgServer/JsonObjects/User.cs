@@ -5,6 +5,11 @@ namespace OpenFormGraph.Web.JsonObjects
 {
     public class User
     {
+        public User()
+        {
+            
+        }
+
         public User(TGUser _user)
         {
             Guid = _user.Guid;

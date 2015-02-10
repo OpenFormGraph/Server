@@ -87,12 +87,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientViews\addform.html" />
-    <Content Include="ClientViews\addformtemplate.html" />
-    <Content Include="ClientViews\adduser.html" />
-    <Content Include="ClientViews\listformtemplates.html" />
+    <Content Include="ClientViews\formtemplate_add.html" />
+    <Content Include="ClientViews\form_edit.html" />
+    <Content Include="ClientViews\formtemplate_edit.html" />
+    <Content Include="ClientViews\user_add.html" />
+    <Content Include="ClientViews\user_edit.html" />
+    <Content Include="ClientViews\formtemplate_list.html" />
     <Content Include="ClientViews\home.html" />
-    <Content Include="ClientViews\listusers.html" />
+    <Content Include="ClientViews\user_list.html" />
     <Content Include="ClientViews\login.html" />
     <Content Include="ClientViews\logout.html" />
     <Content Include="ClientViews\search.html" />
@@ -104,7 +106,7 @@
     <None Include="Views\dev_buildadminuserresult.sshtml" />
     <None Include="Views\dev_dbbuildresult.sshtml" />
     <None Include="Views\menu_assets.sshtml" />
-    <None Include="Views\menu_admin.sshtml" />
+    <None Include="Views\menu_useradmin.sshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -113,14 +115,17 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <None Include="Views\menu.sshtml" />
+    <None Include="Views\menu_dataadmin.sshtml" />
     <None Include="Views\standardincludes.sshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper\CustomBootstrapper.cs" />
+    <Compile Include="Constants\UserRoles.cs" />
     <Compile Include="Helpers\AuthHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\UserMapper.cs" />
     <Compile Include="JsonObjects\Form.cs" />
+    <Compile Include="JsonObjects\BaseResult.cs" />
     <Compile Include="JsonObjects\List.cs" />
     <Compile Include="JsonObjects\ListValue.cs" />
     <Compile Include="JsonObjects\LoginRequest.cs" />
@@ -130,6 +135,7 @@
     <Compile Include="JsonObjects\Relationship.cs" />
     <Compile Include="JsonObjects\User.cs" />
     <Compile Include="Modules\AppModule.cs" />
+    <Compile Include="Modules\CustomModule.cs" />
     <Compile Include="Modules\RestModule.cs" />
     <Compile Include="Objects\NancyUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

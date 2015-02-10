@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using OpenFormGraph.Library.Managers;
+using OpenFormGraph.Web.Constants;
 using OpenFormGraph.Web.JsonObjects;
 using TreeGecko.Library.Net.Objects;
 
@@ -18,7 +19,7 @@ namespace OpenFormGraph.Web.Helpers
             {
                 JsonObjects.User user = new User(tgUser);
 
-                if (_manager.HasUserRole(user.Guid, "UserAdmin"))
+                if (_manager.HasUserRole(user.Guid, UserRoles.UserAdmin))
                 {
                     user.IsUserAdmin = true;
                 }
@@ -27,7 +28,7 @@ namespace OpenFormGraph.Web.Helpers
                     user.IsUserAdmin = false;
                 }
 
-                if (_manager.HasUserRole(user.Guid, "DataAdmin"))
+                if (_manager.HasUserRole(user.Guid, UserRoles.DataAdmin))
                 {
                     user.IsDataAdmin = true;
                 }

@@ -1,9 +1,8 @@
 ﻿
 namespace OpenFormGraph.Web.JsonObjects
 {
-    public class LoginResult
+    public class LoginResult : BaseResult
     {
-        public string Result { get; set; }
         public string DisplayName { get; set; }
         public string Username { get; set; }
         public string AuthToken { get; set; }

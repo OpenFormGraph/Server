@@ -44,7 +44,7 @@ angular.module('ofgMobile')
     ]);
 
 angular.module('ofgMobile')
-    .controller('SearchCtrl', [
+    .controller('FormTemplateCtrl', [
         'UserService',
         function(userService) {
             var self = this;
@@ -54,14 +54,38 @@ angular.module('ofgMobile')
     ]);
 
 angular.module('ofgMobile')
-    .controller('UserAdminCtrl', [
-        '$http', '$scope', '$routeParams', 'UserAdminService',
-        function ($http, $scope, $routeParams, userAdminService) {
+    .controller('UserAddCtrl', [
+        '$http', '$scope', '$routeParams', '$location', 'UserAdminService',
+        function($http, $scope, $routeParams, $location, userAdminService) {
             var self = this;
 
             self.user = {};
 
+            self.addUser = function() {
+                userAdminService.addUser(self.user)
+                    .then(function(result) {
+                        $location.path("#/users");
+                    });
+             };
+        }]);
 
+angular.module('ofgMobile')
+    .controller('UserEditCtrl', [
+        '$http', '$scope', '$routeParams', '$location', 'UserAdminService',
+        function($http, $scope, $routeParams, $location, userAdminService) {
+            var self = this;
+
+            self.Guid = $routeParams.guid;
+            self.user = {};
+
+            self.editUser = function() {
+                self.user.Guid = self.Guid;
+
+                userAdminService.editUser(self.user)
+                    .then(function(result) {
+                        $location.path("#/users");
+                    });
+            };
         }
     ]);
 

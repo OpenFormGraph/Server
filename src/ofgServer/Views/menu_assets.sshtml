@@ -1,9 +1,9 @@
 ﻿<li class="dropdown" ng-show="mainCtrl.userService.isLoggedIn">
-	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assets <span class="caret"></span></a>
+	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inspect <span class="caret"></span></a>
 	<ul class="dropdown-menu" role="menu">
-		<li><a href="#/assets/search">Search</a></li>
-		<li class="divider"></li>
-		<li><a href="#/assets/add/tower">Add Tower</a></li>
-		<li><a href="#/assets/add/transformer">Add Transformer</a></li>
-	</ul>
+		<li><a href="#/inspect/vehicle">Inspect Vehicle</a></li>
+		<li><a href="#/inspections/vehicle/mine">My Inspetions</a></li>
+    <li class="divider"></li>
+    <li><a href="#/vehicles/mine">My Vehicles</a></li>
+  </ul>
 </li>

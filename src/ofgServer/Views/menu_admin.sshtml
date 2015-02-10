@@ -1,8 +1,0 @@
-﻿<li class="dropdown" ng-show="mainCtrl.userService.isUserAdmin">
-	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
-	<ul class="dropdown-menu" role="menu">
-		<li><a href="#/users/list">List Users</a></li>
-		<li class="divider"></li>
-		<li><a href="#/users/add">Add User</a></li>
-	</ul>
-</li>

@@ -15,7 +15,8 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
         @Partial['menu_assets.sshtml']
-        @Partial['menu_admin.sshtml']
+        @Partial['menu_useradmin.sshtml']
+        @Partial['menu_dataadmin.sshtml']
       </ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li ng-hide="mainCtrl.userService.isLoggedIn"><a href="#/login">Login</a></li>

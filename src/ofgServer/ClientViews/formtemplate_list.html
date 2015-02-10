@@ -1,0 +1,31 @@
+﻿<div class="users-container" ng-controller="FormTemplateListCtrl as templateListCtrl">
+    <div class="row padbottom">
+        <div class="col-xs-1 col-xs-offset-10">
+            <a class="btn btn-default btn-sm" href="#/user">Add User</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th style="width: 100px; ">Action</th>
+                            <th style="width: 100px; ">Name</th>
+                            <th style="min-width: 80px;">Form Subject</th>
+                            <th style="min-width: 120px;">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="form in data.FormTemplates">
+                            <td><a class="btn btn-default btn-sm" href="#/formtemplate/{{ form.Guid }}">Edit</a></td>
+                            <td>{{ form.Name }}</td>
+                            <td>{{ form.FormSubject }}</td>
+                            <td>{{ form.Description }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
