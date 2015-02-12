@@ -1,3 +1,47 @@
-﻿<div>
-    
+﻿<div class="adduser-container" ng-controller="FormTemplateCtrl as ftCtrl">
+    <div class="alert alert-danger" ng-bind="ftCtrl.errorMessage" ng-show="ftCtrl.errorMessage">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="card ft-card">
+                <div class="ft-form">
+                    <form name="ftForm" ng-submit="ftCtrl.saveFormTemplate()" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" 
+                                   ng-model="ftCtrl.item.Name"
+                                   class="form-control"
+                                   id="name"
+                                   placeholder="Enter Template Name"
+                                   required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" 
+                                   ng-model="ftCtrl.item.Description"
+                                   class="form-control"
+                                   id="description"
+                                   placeholder="Enter Template Description"
+                                   required="">
+                        </div>  
+                        <div class="form-group">
+                            <label for="formsubject">Form Subject</label>
+                            <select id="formsubject" 
+                                    class="form-control"
+                                    ng-model="ftCtrl.item.FormSubject" 
+                                    ng-options="nvp.Value as nvp.Name for nvp in ftCtrl.formSubjects">
+                                <option value="">-- choose type --</option>
+                            </select>
+                        </div>  
+                        <input type="submit"
+                               class="btn btn-success btn-sm"
+                               value="Save"
+                               ng-disabled="ftForm.$invalid">
+                    </form>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

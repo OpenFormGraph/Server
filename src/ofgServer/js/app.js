@@ -19,11 +19,14 @@
             .when('/user/:guid', {
                 templateUrl: 'views/user_edit.html'
             })
+            .when('/formtemplates', {
+                templateUrl: 'views/formtemplate_list.html'
+            })
             .when('/formtemplate', {
                 templateUrl: 'views/formtemplate_add.html'
             })
             .when('/formtemplate/:guid', {
-                templateUrl: 'views/formtemplate_edit.html'
+                templateUrl: 'views/formtemplate_add.html'
             })        
             .when('/inspect/vehicle', {                
                 

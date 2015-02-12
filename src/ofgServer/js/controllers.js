@@ -43,15 +43,7 @@ angular.module('ofgMobile')
         }
     ]);
 
-angular.module('ofgMobile')
-    .controller('FormTemplateCtrl', [
-        'UserService',
-        function(userService) {
-            var self = this;
 
-            
-        }
-    ]);
 
 angular.module('ofgMobile')
     .controller('UserAddCtrl', [
@@ -104,3 +96,64 @@ angular.module('ofgMobile')
                 });
         }
     ]);
+
+angular.module('ofgMobile')
+    .controller('FormTemplateCtrl', [
+        '$http', '$scope', '$routeParams', '$location', 'FormTemplateService',
+        function($http, $scope, $routeParams, $location, formTemplateService) {
+            var self = this;
+
+            self.item = {};
+            self.formSubjects = {};
+            
+            self.Guid = $routeParams.guid;
+            self.getFormSubjects = function() {
+                formTemplateService.getFormSubjects()
+                    .then(function (result) {
+                        self.formSubjects = result;
+                    });
+            };
+
+            self.getFormTemplate = function(guid) {
+                formTemplateService.getFormTemplate(guid)
+                    .then(function(result) {
+                        self.item = result;
+                    });
+            };
+
+            self.saveFormTemplate = function() {
+                self.item.Guid = self.Guid;
+
+                formTemplateService.saveFormTemplate(self.item)
+                    .then(function(result) {
+                        $location.path("/formtemplates");
+                    });
+            };
+
+            self.getFormSubjects();
+
+            if (self.Guid != null) {
+                self.getFormTemplate(self.Guid);
+            }
+        }
+    ]);
+
+angular.module('ofgMobile')
+    .controller('FormTemplateListCtrl', [
+        '$http', '$scope', 'FormTemplateService',
+        function($http, $scope, formTemplateService) {
+            var self = this;
+
+            self.data = {};
+
+            self.getFormTemplates = function() {
+                formTemplateService.getFormTemplates()
+                    .then(function(result) {
+                        self.data.FormTemplates = result;
+                    });
+            };
+
+            self.getFormTemplates();
+        }
+    ]);
+            

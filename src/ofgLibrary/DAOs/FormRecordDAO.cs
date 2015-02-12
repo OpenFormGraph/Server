@@ -21,7 +21,7 @@ namespace OpenFormGraph.Library.DAOs
 
         public List<FormRecord> GetFormRecordTemplates()
         {
-            return null;
+            return GetList("IsTemplate", "True");
         }
 
         public List<FormRecord> GetFormRecordTemplates(string _formSubject)

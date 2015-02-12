@@ -89,7 +89,6 @@
   <ItemGroup>
     <Content Include="ClientViews\formtemplate_add.html" />
     <Content Include="ClientViews\form_edit.html" />
-    <Content Include="ClientViews\formtemplate_edit.html" />
     <Content Include="ClientViews\user_add.html" />
     <Content Include="ClientViews\user_edit.html" />
     <Content Include="ClientViews\formtemplate_list.html" />
@@ -114,7 +113,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Views\menu.sshtml" />
+    <None Include="Views\menu.sshtml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Views\menu_dataadmin.sshtml" />
     <None Include="Views\standardincludes.sshtml" />
   </ItemGroup>
@@ -126,10 +127,12 @@
     <Compile Include="Helpers\UserMapper.cs" />
     <Compile Include="JsonObjects\Form.cs" />
     <Compile Include="JsonObjects\BaseResult.cs" />
+    <Compile Include="JsonObjects\FormTemplate.cs" />
     <Compile Include="JsonObjects\List.cs" />
     <Compile Include="JsonObjects\ListValue.cs" />
     <Compile Include="JsonObjects\LoginRequest.cs" />
     <Compile Include="JsonObjects\LoginResult.cs" />
+    <Compile Include="JsonObjects\NameValuePair.cs" />
     <Compile Include="JsonObjects\NewUser.cs" />
     <Compile Include="JsonObjects\Question.cs" />
     <Compile Include="JsonObjects\Relationship.cs" />

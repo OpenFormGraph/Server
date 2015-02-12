@@ -21,6 +21,12 @@ namespace OpenFormGraph.Library.Managers
 
         #region FormRecord
 
+        public List<FormRecord> GetTemplateFormRecords()
+        {
+            FormRecordDAO dao = new FormRecordDAO(MongoDB);
+            return dao.GetFormRecordTemplates();
+        }
+
         public FormRecord GetFormRecord(Guid _guid)
         {
             FormRecordDAO dao = new FormRecordDAO(MongoDB);

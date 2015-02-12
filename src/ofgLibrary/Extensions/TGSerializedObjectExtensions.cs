@@ -28,11 +28,14 @@ namespace OpenFormGraph.Library.Extensions
         public static void AddMetadata(this TGSerializedObject _tgs, 
             string _name, NameValueCollection _metadata)
         {
-            foreach (string key in _metadata.AllKeys)
+            if (_metadata != null)
             {
-                string value = _metadata.Get(key);
+                foreach (string key in _metadata.AllKeys)
+                {
+                    string value = _metadata.Get(key);
 
-                _tgs.Add(_name + key, value);
+                    _tgs.Add(_name + key, value);
+                }
             }
         }
 
