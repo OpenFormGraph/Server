@@ -89,6 +89,7 @@
   <ItemGroup>
     <Content Include="ClientViews\formtemplate_add.html" />
     <Content Include="ClientViews\form_edit.html" />
+    <Content Include="ClientViews\questiontemplate_edit.html" />
     <Content Include="ClientViews\user_add.html" />
     <Content Include="ClientViews\user_edit.html" />
     <Content Include="ClientViews\formtemplate_list.html" />
@@ -125,6 +126,7 @@
     <Compile Include="Helpers\AuthHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\UserMapper.cs" />
+    <Compile Include="JsonObjects\AbstractBaseItem.cs" />
     <Compile Include="JsonObjects\Form.cs" />
     <Compile Include="JsonObjects\BaseResult.cs" />
     <Compile Include="JsonObjects\FormTemplate.cs" />
@@ -135,6 +137,7 @@
     <Compile Include="JsonObjects\NameValuePair.cs" />
     <Compile Include="JsonObjects\NewUser.cs" />
     <Compile Include="JsonObjects\Question.cs" />
+    <Compile Include="JsonObjects\QuestionTemplate.cs" />
     <Compile Include="JsonObjects\Relationship.cs" />
     <Compile Include="JsonObjects\User.cs" />
     <Compile Include="Modules\AppModule.cs" />

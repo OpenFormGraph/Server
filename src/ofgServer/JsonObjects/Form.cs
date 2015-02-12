@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OpenFormGraph.Web.JsonObjects
 {
-    public class Form
+    public class Form : AbstractBaseItem
     {
         public Form(Library.Objects.FormRecord _form,
             List<Library.Objects.Question> _questions,

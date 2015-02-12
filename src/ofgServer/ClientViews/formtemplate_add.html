@@ -38,8 +38,40 @@
                                value="Save"
                                ng-disabled="ftForm.$invalid">
                     </form>
-                    
+                    <div class="row">
+                        <div class="col-md-10 col-xs-8">
+                            <h3>Questions</h3>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <a class="btn btn-default btn-sm" href="#/question">Add Question</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 100px; ">Action</th>
+                                            <th style="width: 100px; ">Type</th>
+                                            <th style="min-width: 80px;">Text</th>
+                                            <th style="min-width: 120px;">Description</th>
+                                            <th style="width: 100px;">Required</th>
 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="question in data.item.Questions">
+                                            <td><a class="btn btn-default btn-sm" href="#/question/{{ question.Guid }}">Edit</a></td>
+                                            <td>{{ question.QuestionType }}</td>
+                                            <td>{{ question.Text }}</td>
+                                            <td>{{ question.IsRequired }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

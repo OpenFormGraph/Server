@@ -6,9 +6,8 @@ using OpenFormGraph.Library.Objects;
 
 namespace OpenFormGraph.Web.JsonObjects
 {
-    public class FormTemplate
+    public class FormTemplate : AbstractBaseItem
     {
-        public string Guid { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string FormSubject { get; set; }
