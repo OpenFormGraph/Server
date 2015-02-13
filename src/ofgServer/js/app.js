@@ -28,11 +28,11 @@
             .when('/formtemplate/:guid', {
                 templateUrl: 'views/formtemplate_add.html'
             })        
-            .when('/inspect/vehicle', {                
-                
+            .when('/questiontemplate', {
+                templateUrl: 'views/questiontemplate_add.html'
             })
-            .when('/inspections/vehicle/mine', {                
-                
+            .when('/questiontemplate/:guid', {
+                templateUrl: 'views/questiontemplate_add.html'
             });
 
         $routeProvider.otherwise({

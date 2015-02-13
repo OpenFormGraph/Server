@@ -89,7 +89,7 @@
   <ItemGroup>
     <Content Include="ClientViews\formtemplate_add.html" />
     <Content Include="ClientViews\form_edit.html" />
-    <Content Include="ClientViews\questiontemplate_edit.html" />
+    <Content Include="ClientViews\questiontemplate_add.html" />
     <Content Include="ClientViews\user_add.html" />
     <Content Include="ClientViews\user_edit.html" />
     <Content Include="ClientViews\formtemplate_list.html" />
@@ -99,14 +99,24 @@
     <Content Include="ClientViews\logout.html" />
     <Content Include="ClientViews\search.html" />
     <Content Include="js\app.js" />
-    <Content Include="js\controllers.js" />
+    <Content Include="js\controllers\FormTemplateController.js" />
+    <Content Include="js\controllers\FormTemplateListController.js" />
+    <Content Include="js\controllers\LoginController.js" />
+    <Content Include="js\controllers\LogoutController.js" />
+    <Content Include="js\controllers\MainController.js" />
+    <Content Include="js\controllers\QuestionTemplateController.js" />
+    <Content Include="js\controllers\UserAddController.js" />
+    <Content Include="js\controllers\UserEditController.js" />
     <Content Include="js\lockr.min.js" />
-    <Content Include="js\services.js" />
     <Content Include="css\app.css" />
+    <None Include="Views\appincludes.sshtml" />
     <None Include="Views\dev_buildadminuserresult.sshtml" />
     <None Include="Views\dev_dbbuildresult.sshtml" />
     <None Include="Views\menu_assets.sshtml" />
     <None Include="Views\menu_useradmin.sshtml" />
+    <Content Include="js\services\FormTemplateService.js" />
+    <Content Include="js\services\UserAdminService.js" />
+    <Content Include="js\services\UserService.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -140,6 +150,7 @@
     <Compile Include="JsonObjects\QuestionTemplate.cs" />
     <Compile Include="JsonObjects\Relationship.cs" />
     <Compile Include="JsonObjects\User.cs" />
+    <Content Include="js\controllers\UserListController.js" />
     <Compile Include="Modules\AppModule.cs" />
     <Compile Include="Modules\CustomModule.cs" />
     <Compile Include="Modules\RestModule.cs" />

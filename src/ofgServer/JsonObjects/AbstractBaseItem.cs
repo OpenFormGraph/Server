@@ -7,6 +7,6 @@ namespace OpenFormGraph.Web.JsonObjects
 {
     public abstract class AbstractBaseItem
     {
-        public Guid Guid { get; set; }
+        public string Guid { get; set; }
     }
 }

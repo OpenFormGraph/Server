@@ -1,0 +1,14 @@
+﻿<script src="/js/services/UserService.js"></script>
+<script src="/js/services/UserAdminService.js"></script>
+<script src="/js/services/FormTemplateService.js"></script>
+
+<script src="/js/controllers/FormTemplateController.js"></script>
+<script src="/js/controllers/FormTemplateListController.js"></script>
+<script src="/js/controllers/LoginController.js"></script>
+<script src="/js/controllers/LogoutController.js"></script>
+<script src="/js/controllers/MainController.js"></script>
+<script src="/js/controllers/QuestionTemplateController.js"></script>
+<script src="/js/controllers/UserAddController.js"></script>
+<script src="/js/controllers/UserEditController.js"></script>
+<script src="/js/controllers/UserListController.js"></script>
+
