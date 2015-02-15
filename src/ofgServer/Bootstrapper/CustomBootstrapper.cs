@@ -35,6 +35,10 @@ namespace OpenFormGraph.Web.Bootstrapper
             );
 
             _conventions.StaticContentsConventions.Add(
+                StaticContentConventionBuilder.AddDirectory("js/3rdParty", @"js/3rdParty")
+            );
+
+            _conventions.StaticContentsConventions.Add(
                 StaticContentConventionBuilder.AddDirectory("js/controllers", @"js/controllers")
             );
 

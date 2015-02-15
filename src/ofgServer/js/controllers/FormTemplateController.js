@@ -7,7 +7,7 @@
             self.item = {};
             self.formSubjects = {};
 
-            self.Guid = $routeParams.guid;
+            self.Guid = $routeParams.formtemplateguid;
             self.getFormSubjects = function () {
                 formTemplateService.getFormSubjects()
                     .then(function (result) {

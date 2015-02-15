@@ -11,6 +11,7 @@
                     <thead>
                         <tr>
                             <th style="width: 100px; ">Action</th>
+                            <th style="width: 100px; ">Questions</th>
                             <th style="width: 180px; ">Name</th>
                             <th style="min-width: 80px;">Form Subject</th>
                             <th style="min-width: 120px;">Description</th>
@@ -19,6 +20,7 @@
                     <tbody>
                         <tr ng-repeat="form in templateListCtrl.data.FormTemplates">
                             <td><a class="btn btn-default btn-sm" href="#/formtemplate/{{ form.Guid }}">Edit</a></td>
+                            <td><a class="btn btn-default btn-sm" href="#/questiontemplates/{{ form.Guid }}">Questions</a></td>
                             <td>{{ form.Name }}</td>
                             <td>{{ form.FormSubject }}</td>
                             <td>{{ form.Description }}</td>

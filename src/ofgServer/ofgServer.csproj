@@ -87,6 +87,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientViews\questiontemplate_list.html" />
     <Content Include="ClientViews\formtemplate_add.html" />
     <Content Include="ClientViews\form_edit.html" />
     <Content Include="ClientViews\questiontemplate_add.html" />
@@ -98,6 +99,8 @@
     <Content Include="ClientViews\login.html" />
     <Content Include="ClientViews\logout.html" />
     <Content Include="ClientViews\search.html" />
+    <Content Include="js\3rdParty\loki.min.js" />
+    <Content Include="js\3rdParty\pouchdb-3.3.1.min.js" />
     <Content Include="js\app.js" />
     <Content Include="js\controllers\FormTemplateController.js" />
     <Content Include="js\controllers\FormTemplateListController.js" />
@@ -107,7 +110,7 @@
     <Content Include="js\controllers\QuestionTemplateController.js" />
     <Content Include="js\controllers\UserAddController.js" />
     <Content Include="js\controllers\UserEditController.js" />
-    <Content Include="js\lockr.min.js" />
+    <Content Include="js\3rdParty\lockr.min.js" />
     <Content Include="css\app.css" />
     <None Include="Views\appincludes.sshtml" />
     <None Include="Views\dev_buildadminuserresult.sshtml" />
@@ -115,6 +118,7 @@
     <None Include="Views\menu_assets.sshtml" />
     <None Include="Views\menu_useradmin.sshtml" />
     <Content Include="js\services\FormTemplateService.js" />
+    <Content Include="js\services\LocalDBService.js" />
     <Content Include="js\services\UserAdminService.js" />
     <Content Include="js\services\UserService.js" />
     <Content Include="Web.config" />

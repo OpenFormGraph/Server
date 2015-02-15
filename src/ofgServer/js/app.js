@@ -25,14 +25,17 @@
             .when('/formtemplate', {
                 templateUrl: 'views/formtemplate_add.html'
             })
-            .when('/formtemplate/:guid', {
+            .when('/formtemplate/:formtemplateguid', {
                 templateUrl: 'views/formtemplate_add.html'
             })        
             .when('/questiontemplate', {
                 templateUrl: 'views/questiontemplate_add.html'
             })
-            .when('/questiontemplate/:guid', {
+            .when('/questiontemplate/:formtemplateguid', {
                 templateUrl: 'views/questiontemplate_add.html'
+            })
+            .when('/questiontemplates/:formtemplateguid', {
+                templateUrl: 'views/questiontemplate_list.html'
             });
 
         $routeProvider.otherwise({
